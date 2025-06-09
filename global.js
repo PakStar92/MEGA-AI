@@ -50,7 +50,7 @@ const {
   jidNormalizedUser,
 } = await (
   await import('@whiskeysockets/baileys')
-).default
+)
 
 import readline from 'readline'
 
