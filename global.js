@@ -48,9 +48,7 @@ const {
   proto,
   delay,
   jidNormalizedUser,
-} = await (
-  await import('@whiskeysockets/baileys')
-)
+} = await import('@whiskeysockets/baileys')
 
 import readline from 'readline'
 
