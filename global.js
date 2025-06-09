@@ -86,12 +86,15 @@ const MAIN_LOGGER = pino({ timestamp: () => `,"time":"${new Date().toJSON()}"` }
 const logger = MAIN_LOGGER.child({})
 logger.level = 'fatal'
 
-const store = useStore ? makeInMemoryStore({ logger }) : undefined
-store?.readFromFile('./session.json')
+const store = makeInMemoryStore({});
 
+// Optionally read from a file to initialize the store
+store.readFromFile('./baileys_store.json');
+
+// Save the state to a file every 10 seconds
 setInterval(() => {
-  store?.writeToFile('./session.json')
-}, 10000 * 6)
+  store.writeToFile('./baileys_store.json');
+}, 10_000);
 
 const msgRetryCounterCache = new NodeCache()
 
