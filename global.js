@@ -57,54 +57,66 @@ import readline from 'readline'
 dotenv.config()
 
 
-
+// ====== CONFIG FLAGS ======
 const pairingCode = !!global.pairingNumber || process.argv.includes('--pairing-code')
 const useQr = process.argv.includes('--qr')
 const useStore = true
 
+// ====== LOGGER SETUP ======
 const MAIN_LOGGER = pino({ timestamp: () => `,"time":"${new Date().toJSON()}"` })
-
 const logger = MAIN_LOGGER.child({})
 logger.level = 'fatal'
 
-import fs from 'fs';
+// ====== STORE FILE SETUP ======
+const storePath = './baileys_store.json'
 
-const storePath = './baileys_store.json';
+// Ensure store file is valid before loading it
+function sanitizeStoreFile(path) {
+    if (!fs.existsSync(path)) return
 
-if (fs.existsSync(storePath)) {
     try {
-        const json = JSON.parse(fs.readFileSync(storePath, 'utf8'));
+        const data = JSON.parse(fs.readFileSync(path, 'utf8'))
 
-        if (!Array.isArray(json.chats)) {
-            console.warn('[WARN] Fixing invalid chats in store file');
-            json.chats = [];
+        if (!Array.isArray(data.chats)) {
+            console.warn('[WARN] Fixing invalid chats in store file')
+            data.chats = []
         }
 
-        if (typeof json.messages !== 'object' || json.messages === null) {
-            json.messages = {};
+        if (typeof data.messages !== 'object' || data.messages === null) {
+            data.messages = {}
         }
 
-        if (typeof json.contacts !== 'object' || json.contacts === null) {
-            json.contacts = {};
+        if (typeof data.contacts !== 'object' || data.contacts === null) {
+            data.contacts = {}
         }
 
-        fs.writeFileSync(storePath, JSON.stringify(json, null, 2));
+        fs.writeFileSync(path, JSON.stringify(data, null, 2))
     } catch (err) {
-        console.error('Could not parse store file, resetting it.', err);
-        fs.writeFileSync(storePath, JSON.stringify({
+        console.error('[ERROR] Could not parse store file. Replacing with empty state.', err)
+        const emptyStore = {
             chats: [],
             messages: {},
             contacts: {}
-        }, null, 2));
+        }
+        fs.writeFileSync(path, JSON.stringify(emptyStore, null, 2))
     }
 }
 
-// Now load
-const store = makeInMemoryStore();
-store.readFromFile(storePath);
-setInterval(() => {
-    store.writeToFile(storePath)
-}, 10_000)
+// Sanitize before loading
+sanitizeStoreFile(storePath)
+
+// ====== STORE SETUP ======
+const store = makeInMemoryStore({ logger })
+
+// Only load and save store if enabled
+if (useStore) {
+    store.readFromFile(storePath)
+
+    setInterval(() => {
+        store.writeToFile(storePath)
+    }, 10_000)
+}
+
 
 const msgRetryCounterCache = new NodeCache()
 
