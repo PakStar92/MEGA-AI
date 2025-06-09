@@ -23,9 +23,15 @@ const delay = ms =>
  * Handle messages upsert
  * @param {import("@whiskeysockets/baileys").BaileysEventMap<unknown>["messages.upsert"]} groupsUpdate
  */
-const { getAggregateVotesInPollMessage } =
+const { getAggregateVotesInPollMessage, makeInMemoryStore } = await (
   await import('@whiskeysockets/baileys')
-import store from './store.js';
+).default
+const store = makeInMemoryStore({
+  logger: Pino().child({
+    level: 'fatal',
+    stream: 'store',
+  }),
+})
 export async function handler(chatUpdate) {
   this.msgqueque = this.msgqueque || []
   if (!chatUpdate) return
