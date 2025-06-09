@@ -61,7 +61,6 @@ async function main() {
 
   if (!txt) {
     console.error('SESSION ID not found.')
-    return
   }
 
   try {
