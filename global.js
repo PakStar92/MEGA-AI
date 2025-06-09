@@ -90,7 +90,7 @@ if (pairingCode) {
 } else {
   console.log('>> No connection method specified.');
 }
-const useStore = true
+const useStore = !true
 
 const MAIN_LOGGER = pino({ timestamp: () => `,"time":"${new Date().toJSON()}"` })
 
