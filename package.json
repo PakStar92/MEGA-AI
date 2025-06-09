@@ -46,7 +46,7 @@
         "@hapi/boom": "^10.0.1",
         "@shineiichijo/marika": "^3.0.1",
         "@vitalets/google-translate-api": "^9.2.0",
-        "@whiskeysockets/baileys": "npm:gifted-baileys@latest",
+        "@whiskeysockets/baileys": "npm:@fizzxydev/baileys-pro@8.5.12",
         "@xct007/frieren-scraper": "*",
         "acrcloud": "^1.4.0",
         "awesome-phonenumber": "^3.4.0",
