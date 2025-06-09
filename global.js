@@ -84,51 +84,7 @@ const MAIN_LOGGER = pino({ timestamp: () => `,"time":"${new Date().toJSON()}"` }
 const logger = MAIN_LOGGER.child({})
 logger.level = 'fatal'
 
-class SimpleStore {
-  constructor(filePath) {
-    this.filePath = filePath;
-    this.data = {
-      chats: {},
-      messages: {},
-      contacts: {},
-      // Add more properties as needed
-    };
-  }
 
-  readFromFile() {
-    if (fs.existsSync(this.filePath)) {
-      try {
-        const raw = fs.readFileSync(this.filePath, 'utf-8');
-        this.data = JSON.parse(raw);
-        console.log('[Store] Loaded from file.');
-      } catch (err) {
-        console.error('[Store] Failed to read from file:', err);
-      }
-    }
-  }
-
-  writeToFile() {
-    try {
-      fs.writeFileSync(this.filePath, JSON.stringify(this.data, null, 2));
-      console.log('[Store] Written to file.');
-    } catch (err) {
-      console.error('[Store] Failed to write to file:', err);
-    }
-  }
-
-  // Example: You can define methods to interact with the store
-  saveMessage(message) {
-    this.data.messages[message.key.id] = message;
-  }
-}
-
-const store = new SimpleStore('./baileys_store.json');
-
-store.readFromFile();
-
-setInterval(() => {
-  store.writeToFile();
-}, 10_000);
 const msgRetryCounterCache = new NodeCache()
 
 const rl = readline.createInterface({
