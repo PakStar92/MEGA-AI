@@ -187,7 +187,7 @@ const connectionOptions = {
   logger: Pino({
     level: 'fatal',
   }),
-  printQRInTerminal: !pairingCode,
+  printQRInTerminal: useQr,
   browser: Browsers.macOS("Safari"),
   auth: {
     creds: state.creds,
