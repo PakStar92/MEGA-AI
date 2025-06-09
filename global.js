@@ -43,7 +43,6 @@ const {
   MessageRetryMap,
   fetchLatestWaWebVersion,
   makeCacheableSignalKeyStore,
-  makeInMemoryStore,
   Browsers,
   proto,
   delay,
@@ -84,7 +83,7 @@ const MAIN_LOGGER = pino({ timestamp: () => `,"time":"${new Date().toJSON()}"` }
 const logger = MAIN_LOGGER.child({})
 logger.level = 'fatal'
 
-const store = makeInMemoryStore({});
+const store = ({});
 
 // Optionally read from a file to initialize the store
 store.readFromFile('./baileys_store.json');
