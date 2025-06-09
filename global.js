@@ -75,8 +75,21 @@ main()
 await delay(1000 * 10)
 
 
-const pairingCode = !!global.pairingNumber || process.argv.includes('--pairing-code')
-const useQr = process.argv.includes('--qr')
+const pairingCode = process.argv.includes('--pairing-code');
+const useQr = process.argv.includes('--qr');
+
+console.log('Pairing Code:', pairingCode);
+console.log('QR Code:', useQr);
+
+if (pairingCode) {
+  console.log('>> Starting with pairing code...');
+  // call your Baileys pairing logic
+} else if (useQr) {
+  console.log('>> Starting with QR code...');
+  // QR mode logic
+} else {
+  console.log('>> No connection method specified.');
+}
 const useStore = true
 
 const MAIN_LOGGER = pino({ timestamp: () => `,"time":"${new Date().toJSON()}"` })
