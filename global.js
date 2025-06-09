@@ -67,12 +67,43 @@ const MAIN_LOGGER = pino({ timestamp: () => `,"time":"${new Date().toJSON()}"` }
 const logger = MAIN_LOGGER.child({})
 logger.level = 'fatal'
 
-const store = makeInMemoryStore({ })
-// can be read from a file
-store.readFromFile('./baileys_store.json')
-// saves the state to a file every 10s
+import fs from 'fs';
+
+const storePath = './baileys_store.json';
+
+if (fs.existsSync(storePath)) {
+    try {
+        const json = JSON.parse(fs.readFileSync(storePath, 'utf8'));
+
+        if (!Array.isArray(json.chats)) {
+            console.warn('[WARN] Fixing invalid chats in store file');
+            json.chats = [];
+        }
+
+        if (typeof json.messages !== 'object' || json.messages === null) {
+            json.messages = {};
+        }
+
+        if (typeof json.contacts !== 'object' || json.contacts === null) {
+            json.contacts = {};
+        }
+
+        fs.writeFileSync(storePath, JSON.stringify(json, null, 2));
+    } catch (err) {
+        console.error('Could not parse store file, resetting it.', err);
+        fs.writeFileSync(storePath, JSON.stringify({
+            chats: [],
+            messages: {},
+            contacts: {}
+        }, null, 2));
+    }
+}
+
+// Now load
+const store = makeInMemoryStore();
+store.readFromFile(storePath);
 setInterval(() => {
-    store.writeToFile('./baileys_store.json')
+    store.writeToFile(storePath)
 }, 10_000)
 
 const msgRetryCounterCache = new NodeCache()
