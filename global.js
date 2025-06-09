@@ -56,24 +56,7 @@ import readline from 'readline'
 
 dotenv.config()
 
-async function main() {
-  const txt = global.SESSION_ID
 
-  if (!txt) {
-    console.error('SESSION ID not found.')
-  }
-
-  try {
-    await SaveCreds(txt)
-    console.log('Check Completed.')
-  } catch (error) {
-    console.error('Error:', error)
-  }
-}
-
-main()
-
-await delay(1000 * 10)
 
 
 const pairingCode = !!global.pairingNumber || process.argv.includes('--pairing-code')
@@ -525,6 +508,26 @@ function clearsession() {
     unlinkSync(`./session/${files}`)
   })
 }
+
+async function main() {
+  const txt = global.SESSION_ID
+
+  if (!txt) {
+    console.error('SESSION ID not found.')
+    return
+  }
+
+  try {
+    await SaveCreds(txt)
+    console.log('Check Completed.')
+  } catch (error) {
+    console.error('Error:', error)
+  }
+}
+
+main()
+
+await delay(1000 * 10)
 
 async function connectionUpdate(update) {
   const { connection, lastDisconnect, isNewLogin, qr } = update
