@@ -119,14 +119,20 @@ function formatUptime(seconds) {
 }
 
 function keepAlive() {
-  const url = `https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co`
-  if (/(\/\/|\.)undefined\./.test(url)) return
-  setInterval(
-    () => {
-      fetch(url).catch(console.error)
-    },
-    5 * 1000 * 60
-  )
+  const url = process.env.APP_URL
+
+  if (!url || url === 'undefined') {
+    console.warn('⚠️ APP_URL is not set in environment. Keep-alive skipped.')
+    return
+  }
+
+  console.log(`🟢 Keep-alive pinging: ${url}`)
+
+  setInterval(() => {
+    fetch(url)
+      .then(() => console.log(`✅ Keep-alive ping sent to ${url}`))
+      .catch(err => console.error('❌ Keep-alive failed:', err.message))
+  }, 5 * 60 * 1000) // every 5 minutes
 }
 
 export default connect
