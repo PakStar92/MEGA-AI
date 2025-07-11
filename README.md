@@ -6,18 +6,20 @@
 </p>
 <div align="center">
 
-<img src="https://komarev.com/ghpvc/?username=GlobalTechInfo&label=Profile+Views&color=ff00ff&style=flat-square" />
-<img src="https://img.shields.io/github/stars/GlobalTechInfo/MEGA-AI?color=ff00ff&style=flat-square" />
+<img src="https://komarev.com/ghpvc/?username=GlobalTechInfo&label=Profile+Views&color=success&style=flat-square" />
+<img src="https://img.shields.io/github/stars/GlobalTechInfo/MEGA-AI?color=blue&style=yellow-square" />
 <img src="https://img.shields.io/github/forks/GlobalTechInfo/MEGA-AI?color=ff00ff&style=flat-square" />
-<img src="https://img.shields.io/github/repo-size/GlobalTechInfo/MEGA-AI?color=ff00ff&style=flat-square" />
-<img src="https://img.shields.io/github/last-commit/GlobalTechInfo/MEGA-AI?color=ff00ff&style=flat-square" />
-
+<img src="https://img.shields.io/github/repo-size/GlobalTechInfo/MEGA-AI?color=success&style=flat-square" />
+<img src="https://img.shields.io/github/last-commit/GlobalTechInfo/MEGA-AI?color=yellow&style=flat-square" />
+<a href="https://discord.gg/fZ7MVJM9sq">
+  <img title="Join our Discord" src="https://img.shields.io/discord/1391898062494105752?label=Discord&logo=discord&logoColor=white&style=flat-square&color=7289DA" alt="Discord">
+</a>
 </div>
   
 ----
 
  <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=600&size=24&duration=4000&pause=1000&color=FF0000&center=true&vCenter=true&width=500&lines=ULTIMATE+WHATSAPP+BOT;MULTI-DEVICE+SUPPORT;POWERED+BY+BAILEYS;FAST++SECURE++RELIABLE" alt="Typing SVG"/>
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=600&size=24&duration=4000&pause=1000&color=FF0000&center=true&vCenter=true&width=500&lines=MEGA+PRO+WHATSAPP+BOT;MULTI-DEVICE+SUPPORT;POWERED+BY+BAILEYS;FAST++SECURE++RELIABLE" alt="Typing SVG"/>
 </p>
 
   
@@ -76,6 +78,9 @@ Open WhatsApp > Linked Devices > Link a Device > Link with phone number and ente
 
 ------
 
+## Join Discord
+[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/fZ7MVJM9sq)
+
 ---
 
 ## Features
@@ -100,7 +105,7 @@ Open WhatsApp > Linked Devices > Link a Device > Link with phone number and ente
 ### Step-by-Step Deployment Guide
 
 **Option A: Deploy In Heroku**
-1. [Create an Account on Heroku](https://signup.heroku.com/) if you haven’t already.
+1. [Sign Up on Heroku](https://signup.heroku.com/) if you haven’t already.
 2. Click the button below to deploy directly In Heroku:
    <br>
    <a href='https://heroku.com/deploy?template=https://github.com/GlobTechInfo/MEGA-AI/Bypass' target="_blank">
@@ -108,48 +113,40 @@ Open WhatsApp > Linked Devices > Link a Device > Link with phone number and ente
    </a>
 
 **Option B: Deploy In Koyeb**
-1. [Sign Up on Koyeb](https://app.koyeb.com/auth/signup).
-2. Deploy your app using the button below:
+1. [Sign Up on Koyeb](https://app.koyeb.com/auth/signup). if you haven’t already.
+2. Click the button below to deploy using Koyeb:
    <br>
    <a href='https://app.koyeb.com' target="_blank">
       <img alt='Deploy In Koyeb' src='https://img.shields.io/badge/-DEPLOY-red?style=for-the-badge&logo=koyeb&logoColor=white'/>
    </a>
 
 **Option C: Deploy In Railway**
-1. [Create an Account on Railway](https://railway.app/login) if you don’t have one.
+1. [Sign Up on Railway](https://railway.app/login) if you haven’t already.
 2. Click the button below to deploy using Railway:
    <br>
-   <a href='https://railway.app/template/q20OfH?referralCode=b9IKyc' target="_blank">
+   <a href='https://railway.app/new' target="_blank">
       <img alt='Deploy In Railway' src='https://img.shields.io/badge/-DEPLOY-purple?style=for-the-badge&logo=railway&logoColor=white'/>
    </a>
 
-**Option D: Deploy In Toystack**
-1. [Create an Account on Toystack](https://toystack.ai) if you don’t have one.
-2. Click the button below to deploy using Toystack:
-   <br>
-   <a href='https://toystack.ai' target="_blank">
-      <img alt='Toystack' src='https://img.shields.io/badge/-DEPLOY-blue?style=for-the-badge&logo=toystack&logoColor=white'/>
-   </a>
-
-**Option E: Deploy In Render**
-1. [Create an Account on Render](https://dashboard.render.com/register) if you don’t have one.
+**Option D: Deploy In Render**
+1. [Sign Up on Render](https://dashboard.render.com/register) if you haven’t already.
 2. Click the button below to deploy using Render:
    <br>
    <a href='https://dashboard.render.com' target="_blank">
       <img alt='Deploy In Render' src='https://img.shields.io/badge/-DEPLOY-black?style=for-the-badge&logo=render&logoColor=white'/>
    </a>
    
-   **Option F: Deploy In Replit**
-1. [Create an Account on Replit](https://repl.it) if you don’t have one.
+**Option E: Deploy In Replit**
+1. [Sign Up on Replit](https://repl.it) if you haven’t already.
 2. Click the button below to deploy using Replit:
    <br>
    <a href='https://repl.it/github/GlobalTechInfo/MEGA-AI' target="_blank">
       <img alt='Deploy In Replit' src='https://img.shields.io/badge/-DEPLOY-orange?style=for-the-badge&logo=replit&logoColor=white'/>
    </a>
    
-    **Option G: Deploy In Panel**
+**Option F: Deploy In Panel**
  1. First You Have to Sign up on discord using web or app then click below.
-2. [Sign Up In Panel](https://bot-hosting.net/?aff=1097457675723341836) if you don’t have Already.
+2. [Sign Up On Panel](https://bot-hosting.net/?aff=1097457675723341836) if you don’t have Already.
 3. Click the button below to deploy using Panel:
    <br>
    <a href='https://bot-hosting.net/?aff=1097457675723341836' target="_blank">
@@ -160,7 +157,7 @@ Open WhatsApp > Linked Devices > Link a Device > Link with phone number and ente
 
 ## Support & Community
 
-<p align="center">Need help? Create an <a href="https://github.com/GlobalTechInfo/MEGA-AI/issues">issue</a> or <a href="https://wa.me/923444844060?text=Hello+Global+Tech,+I+Need+Assistance+For+MEGA+AI">Contact Us on WhatsApp</a>.</p>
+<p align="center">Need help? Create an <a href="https://github.com/GlobalTechInfo/MEGA-AI/issues">issue</a> or <a href="https://wa.me/923204566005?text=Hello+Global+Tech,+I+Need+Assistance+For+MEGA+AI">Contact Us on WhatsApp</a>.</p>
 
 ---
 
@@ -192,7 +189,9 @@ To get started with this project, follow the steps below:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/GlobalTechInfo/MEGA-AI.git
+   git clone https://github.com/GlobalTechInfo/MEGA-AI && cd MEGA-AI
+   
+   npm install && npm start
 ---
 
 ### 💥 Features
@@ -263,7 +262,7 @@ Once the installation is complete and the bot is running, you can use the MEGA-A
 #### 8. **Autoreact**: 
 - If You enables, Bot Will Reats With **Beautiful Random Emojis** On All Messages In All Chats.
 
-For more information on configuring and customizing the bot, refer to the [configuration guide](docs/configuration.md).
+For more information on configuring and customizing the bot, refer to the [configuration guide](assets/configuration.md).
 ---
 ### 🛠️ Usage
 Once you’ve set up the bot, you can begin interacting with it on WhatsApp:
@@ -289,7 +288,7 @@ Submit a pull request with a detailed description of your changes.
   <a href="https://t.me/GlobalTechOwner">
     <img src="https://img.shields.io/badge/Telegram-@GlobalBotInc-1DA1F2?style=for-the-badge&logo=telegram&logoColor=white">
   </a>
-  <a href="https://wa.me/message/923444844060">
+  <a href="https://wa.me/message/923204566005">
     <img src="https://img.shields.io/badge/WhatsApp-Click%20Here%20to%20Message%20Me-25D366?style=for-the-badge&logo=whatsapp&logoColor=white">
   </a>
   <a href="https://youtube.com/@GlobalTechInfo">
@@ -425,9 +424,9 @@ npm start
 
 ## Credits
 
-| [![Guru322](https://github.com/Guru322.png?size=100)](https://github.com/Guru322) | [![FG98](https://github.com/FG98F.png?size=100)](https://github.com/FG98F) | [![GlobalTechInfo](https://github.com/GlobalTechInfo.png?size=100)](https://github.com/GlobalTechInfo) |
+| [![Guru322](https://github.com/Guru322.png?size=100)](https://github.com/Guru322) | [![FG98F](https://github.com/FG98F.png?size=100)](https://github.com/FG98F) | [![GlobalTechInfo](https://github.com/GlobalTechInfo.png?size=100)](https://github.com/GlobalTechInfo) |
 | --- | --- | --- |
-| [Guru322](https://github.com/Guru322) | [FG98](https://github.com/FG98F) | [GlobalTechInfo](https://github.com/GlobalTechInfo) |
+| [Guru322](https://github.com/Guru322) | [FG98F](https://github.com/FG98F) | [GlobalTechInfo](https://github.com/GlobalTechInfo) |
 
 
 
@@ -445,13 +444,5 @@ npm start
 - If A plugin's code is obfuscated , You don't have permission to edit it in any form 
 - Don't Forget to Give Credits If you are using or Reuploading My Plugins/files
 - Have A Good Day
-
-
-  
-<p align="center">
-  
-#### Join Group
-[![Group WhatsApp](https://img.shields.io/badge/WhatsApp%20Group-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/FJ6h6DvenWaLXMfP0JXSmQ) 
-
 
 --------
